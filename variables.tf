@@ -4,6 +4,7 @@
 variable "region" {
   description = "AWS region code for creating resources."
   type        = string
+  default     = us-east-2
 }
 
 variable "profile" {
@@ -14,6 +15,7 @@ variable "profile" {
 variable "cluster_version" {
   description = "Kubernetes version to use for the EKS cluster."
   type        = string
+  default     = 1.12.1
 }
 
 variable "vault_user" {
@@ -43,16 +45,19 @@ variable "is_jx2" {
 variable "jx_git_url" {
   description = "URL for the Jenins X cluster git repository"
   type        = string
+  default     = https://github.com/kranthisonuk/jxcluster7.git
 }
 
 variable "jx_bot_username" {
   description = "Bot username used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = kranthisonuk
 }
 
 variable "jx_bot_token" {
   description = "Bot token used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = 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
 }
 
 variable "nginx_chart_version" {
